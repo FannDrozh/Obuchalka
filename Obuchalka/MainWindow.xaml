@@ -14,17 +14,17 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="113*"/>
-            <RowDefinition Height="63*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="126*"/>
         </Grid.RowDefinitions>
-        
+
         <!--Главный экран-->
         <Label x:Name="Label"
                Content="«Построение двойственной математической модели к исходной»"
                Grid.Column="0"
                Grid.ColumnSpan="4" 
-               FontSize="25.5" Visibility="Hidden"/>
+               FontSize="25.5"/>
 
         <Button x:Name="StartTeor"
                 Content="Теория"
@@ -35,7 +35,7 @@
                 Width="150"
                 Height="50" 
                 Cursor="Hand" 
-                Click="StartTeor_Click" Visibility="Hidden"/>
+                Click="StartTeor_Click"/>
 
         <Button x:Name="StartPract"
                 Content="Практика"
@@ -46,36 +46,37 @@
                 Width="150"
                 Height="50" 
                 Cursor="Hand" 
-                Click="StartPract_Click" Visibility="Hidden"/>
-        
+                Click="StartPract_Click" />
+
         <Button x:Name="Exit"
                 Content="Выход"
-                Grid.Column="0"
                 Grid.Row="2"   
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Width="150"
                 Height="50" 
                 Cursor="Hand" 
-                Click="Exit_Click" Visibility="Hidden"/>
+                Click="Exit_Click" />
+        
         <!--Теория-->
+        
+        <!--Стр 1-->
         <TextBlock x:Name="Teor1"
                    Grid.Column="0"
                    Grid.Row="1"
                    Grid.ColumnSpan="2" 
-                   Visibility="Hidden"/>
-        
+                   Visibility="Hidden" Margin="0,4,0,0"/>
+
         <Image x:Name="ImageTeor1"
                Grid.Row="1"
                Grid.Column="2"
                Grid.ColumnSpan="2" 
-               Visibility="Hidden"/>
+               Visibility="Hidden" Margin="0,4,0,0"/>
 
         <Button x:Name="Next1"
             Content="Далее"
             Grid.Column="3"
-            Grid.Row="2"
-            Grid.ColumnSpan="2"    
+            Grid.Row="2"    
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Width="150"
@@ -84,23 +85,35 @@
             Click="Next1_Click" 
             Visibility="Hidden"/>
 
+        <Button x:Name="GlavTeor1"
+            Content="Вернуться на главную"
+            Grid.Column="0"
+            Grid.Row="2"    
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="150"
+            Height="50" 
+            Cursor="Hand" 
+            Click="GlavTeor1_Click" 
+            Visibility="Hidden"/>
+
+        <!--Стр 2-->
         <TextBlock x:Name="Teor2"
                    Grid.Column="0"
                    Grid.Row="1"
                    Grid.ColumnSpan="2" 
-                   Visibility="Hidden"/>
+                   Visibility="Hidden" Margin="0,4,0,0"/>
 
         <Image x:Name="ImageTeor2"
                Grid.Row="1"
                Grid.Column="2"
                Grid.ColumnSpan="2" 
-               Visibility="Hidden"/>
+               Visibility="Hidden" Margin="0,4,0,0"/>
 
         <Button x:Name="Next2"
             Content="Далее"
             Grid.Column="3"
-            Grid.Row="2"
-            Grid.ColumnSpan="2"    
+            Grid.Row="2"    
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Width="150"
@@ -108,9 +121,123 @@
             Cursor="Hand" 
             Click="Next2_Click" 
             Visibility="Hidden"/>
+
+        <Button x:Name="Back2"
+            Content="Назад"
+            Grid.Column="0"
+            Grid.Row="2"    
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="150"
+            Height="50" 
+            Cursor="Hand" 
+            Click="Back2_Click" 
+            Visibility="Hidden"/>
+
+        <!--Стр Последняя-->
+        <TextBlock x:Name="TeorLast"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2" 
+                   Visibility="Hidden" Margin="0,4,0,0"/>
+
+        <Image x:Name="ImageTeorLast"
+               Grid.Row="1"
+               Grid.Column="2"
+               Grid.ColumnSpan="2" 
+               Visibility="Hidden" Margin="0,4,0,0"/>
+
+        <Button x:Name="GlavTeorLast"
+            Content="Вернуться на главную"
+            Grid.Column="3"
+            Grid.Row="2"    
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="150"
+            Height="50" 
+            Cursor="Hand" 
+            Click="GlavTeorLast_Click" 
+            Visibility="Hidden"/>
         
+        <Button x:Name="BackLast"
+            Content="Назад"
+            Grid.Column="0"
+            Grid.Row="2"    
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="150"
+            Height="50" 
+            Cursor="Hand" 
+            Click="BackLast_Click" 
+            Visibility="Hidden"/>
+
         <!--Практика-->
+        <Label x:Name="LabelPr"
+               Content="«Практика по материалу»"
+               Grid.Column="1"
+               Grid.ColumnSpan="2" 
+               FontSize="25.5" 
+               HorizontalAlignment="Center" 
+               HorizontalContentAlignment="Center" 
+               Width="312"
+               Visibility="Hidden"/>
+
+        <Button x:Name="Pr1"
+                Content="Задание 1"
+                Grid.Column="1"
+                Grid.Row="1"   
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="150"
+                Height="50" 
+                Cursor="Hand"
+                Visibility="Hidden"/>
+
+        <Button x:Name="Pr2"
+                Content="Задание 2"
+                Grid.Column="2"
+                Grid.Row="1"   
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="150"
+                Height="50" 
+                Cursor="Hand"
+                Visibility="Hidden"/>
+
+        <Button x:Name="GlavPract"
+                Content="Главная страница"
+                Grid.Row="2"   
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="150"
+                Height="50" 
+                Cursor="Hand" 
+                Click="GlavPract_Click" 
+                Visibility="Hidden"/>
         
+        <!--Задание 1-->
+        <TextBlock x:Name="Pract1"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2" 
+                   Visibility="Hidden" Margin="0,4,0,0"/>
+
+        <Image x:Name="ImagePract1"
+               Grid.Row="1"
+               Grid.Column="2"
+               Grid.ColumnSpan="2" 
+               Visibility="Hidden" Margin="0,4,0,0"/>
+
+        <Button x:Name="Zad1"
+                Content="Следующее задание"
+                Grid.Column="3"
+                Grid.Row="2"    
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="150"
+                Height="50" 
+                Cursor="Hand" 
+                Visibility="Hidden"/>
     </Grid>
-    
+
 </Window>
